@@ -6,27 +6,27 @@
 
 nav {
   display: flex;
-  flex-wrap: wrap;
+  top: 0;
+  background-color: #7b0738;
   padding: 5px;
   position: sticky;
-  top: 0;
   width: 100%;
   height: 70px;
-  background-color: #7b0738;
+  justify-self: start;
 }
-nav .logo {
-  height: 100%;
-}
-nav .logo img {
 
-  height: 90%;
-}
 nav .navigation a {
-  padding: 100px;
+  margin-right: 10px;
   color: white;
   text-decoration: none;
 }
 
+nav .logo {
+  height: 100%;
+}
+nav .logo img {
+  height: 90%;
+}
 
 html {
   background-color: #bc2b62;
@@ -47,9 +47,9 @@ a {
 }
 #wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-wrap: wrap;
+  /* align-items: center;
+  text-align: center; */
   width: 100%;
 }
 .splash {
@@ -57,14 +57,19 @@ a {
   width: 100%;
   background-image: url("../assets/images/marvels-guardians-of-the-galaxy-4k-wallpaper-3840x2160-uhdpaper.com-533.1_a.jpg");
   background-size: cover;  
+  /* position: relative; */
 }
 .splash .splashContent {
-  height: 490px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
   width: 100%;
   color: white;
   background-color: rgba(89, 72, 150, 0.65);
+  justify-content: center;
   text-align: center;
-  align-items: center;
+
 }
 .full {
   display: flex;
@@ -86,15 +91,17 @@ a {
   min-height: 300px;
   background-color: #594896;
   color: black;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  /* align-items: center;
+  text-align: center; */
 }
 .content .box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  height: 350px;
+  /* position: relative; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* width: 200px;
+  height: 200px; */
+  flex: 1 1 150px;
   border-radius: 8px;
   background-color: #aaabfd;
   color: black;
@@ -105,18 +112,25 @@ a {
 }
 
 .content .box .imgBox {
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap:nowrap;
+  flex:auto;
   top: 10px;
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
   border-radius: 15px;
   border: 3px white solid;
   padding: 5px;
   text-align: center;
-  /* z-index: -1; */
+}
+
+.imgBox img {
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  /* padding-top: 5px;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px; */
 }
 
 
